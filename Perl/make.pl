@@ -45,7 +45,7 @@ foreach $db(@IDS) {
 foreach $db1(@IDS) {
     foreach $db2(@IDS) {
 	next if($db1 eq $db2);
-	$src = "http://bx.mathcs.emory.edu/~odenas/mapper_comparisons/UCSC/UCSC_reciprocal/$db1.$db2.rBest.chain";
+	$src = "http://genome.crg.es/~dmitri/export-2.2/chain/$db1.$db2.rBest.chain";
 	make(script=>'wget', before=>$src, output=>{-O=>"$DIR$db1.$db2.rBest.chain"});
 	make(script=>"$MAP/bin/map_agnostic",input=>{-in=>"$DIR$db1.cps.srt", -chain=>"$DIR$db1.$db2.rBest.chain"}, between=>'|sort -k1,1 -k2,2n ',output=>{'>'=>"$DIR$db1.$db2.out"});
 

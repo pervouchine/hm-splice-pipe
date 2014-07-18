@@ -174,7 +174,7 @@ output/mm9-strength1.pdf : data/mm9.sss
 	Rscript R/strength1.r  -i data/mm9.sss  -o output/mm9-strength1.pdf  
 data/hg19.mm9.rBest.chain : 
 	mkdir -p data
-	wget http://bx.mathcs.emory.edu/~odenas/mapper_comparisons/UCSC/UCSC_reciprocal/hg19.mm9.rBest.chain  -O data/hg19.mm9.rBest.chain  
+	wget http://genome.crg.es/~dmitri/export-2.2/chain/hg19.mm9.rBest.chain  -O data/hg19.mm9.rBest.chain  
 data/hg19.mm9.out : data/hg19.cps.srt data/hg19.mm9.rBest.chain
 	mkdir -p data
 	maptools-1.0//bin/map_agnostic  -in data/hg19.cps.srt -chain data/hg19.mm9.rBest.chain |sort -k1,1 -k2,2n  > data/hg19.mm9.out  
@@ -285,7 +285,7 @@ output/hg19-mm9-cosi-hamming.pdf : data/hg19.mm9.hamming2 data/hg19.mm9.cosi.sts
 	Rscript R/hamming.r  -j data/hg19.mm9.hamming2 -i data/hg19.mm9.cosi.sts  -o output/hg19-mm9-cosi-hamming.pdf -s theta 
 data/mm9.hg19.rBest.chain : 
 	mkdir -p data
-	wget http://bx.mathcs.emory.edu/~odenas/mapper_comparisons/UCSC/UCSC_reciprocal/mm9.hg19.rBest.chain  -O data/mm9.hg19.rBest.chain  
+	wget http://genome.crg.es/~dmitri/export-2.2/chain/mm9.hg19.rBest.chain  -O data/mm9.hg19.rBest.chain  
 data/mm9.hg19.out : data/mm9.cps.srt data/mm9.hg19.rBest.chain
 	mkdir -p data
 	maptools-1.0//bin/map_agnostic  -in data/mm9.cps.srt -chain data/mm9.hg19.rBest.chain |sort -k1,1 -k2,2n  > data/mm9.hg19.out  
