@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{lscape}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{multirow}
+
+\newcommand{\singleheight}{6cm}
+\newcommand{\doubleheight}{8cm}
+
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\mean}{Mean}
+
+\renewcommand{\thefigure}{3.\arabic{figure}}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{figure}
+\begin{center}
+\subfigure[]{\includegraphics[height=4cm,page=2]{output/hg19-psi2.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=2]{output/hg19-cosi2.pdf}}\\
+\subfigure[]{\includegraphics[height=4cm,page=1]{output/hg19-psi2.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=1]{output/hg19-cosi2.pdf}}\\
+\caption{Human: Density plots of sample variance and sample mean of $\psi$ and $\theta$ values (across human samples) by gene biotype. 
+Note that in (a) and (b) the the x-axis is transformed to log-scale and in (c) and (d) to the logistic scale.}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\subfigure[]{\includegraphics[height=5cm,page=2]{output/hg19-strength1.pdf}}%
+\subfigure[]{\includegraphics[height=5cm,page=1]{output/hg19-strength1.pdf}}\\
+\caption{Human: The distribution of strengths of donor (top) and acceptor (bottom) splice sites by gene biotype (a) and by alternative vs. constitutive usage (b).}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\subfigure[]{\includegraphics[height=4cm,page=3]{output/hg19-psi2.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=4]{output/hg19-psi2.pdf}}\\
+\subfigure[]{\includegraphics[height=4cm,page=3]{output/hg19-cosi2.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=4]{output/hg19-cosi2.pdf}}
+\caption{Human: The joint distribution of the sample mean and sample variance of $\psi$ and $\theta$ values vs. the combined sequence $s_D+s_A$ strength of a SJ.} 
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\subfigure[]{\includegraphics[height=4cm,page=17]{output/hg19-mm9-psi.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=18]{output/hg19-mm9-psi.pdf}}\\
+\subfigure[]{\includegraphics[height=4cm,page=17]{output/hg19-mm9-cosi.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=18]{output/hg19-mm9-cosi.pdf}}\\
+\caption{The joint distribution of the sample mean and sample variance of $\psi$ and $\theta$ for orthologous SJs.}
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}
+\begin{center}
+\subfigure[]{\includegraphics[height=4cm,page=2]{output/mm9-psi2.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=2]{output/mm9-cosi2.pdf}}\\
+\subfigure[]{\includegraphics[height=4cm,page=1]{output/mm9-psi2.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=1]{output/mm9-cosi2.pdf}}\\
+\caption{Mouse: Density plots of sample variance and sample mean of $\psi$ and $\theta$ values (across human samples) by gene biotype.
+Note that in (a) and (b) the the x-axis is transformed to log-scale and in (c) and (d) to the logistic scale.}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\subfigure[]{\includegraphics[height=5cm,page=2]{output/mm9-strength1.pdf}}%
+\subfigure[]{\includegraphics[height=5cm,page=1]{output/mm9-strength1.pdf}}\\
+\caption{Mouse: The distribution of strengths of donor (top) and acceptor (bottom) splice sites by gene biotype (a) and by alternative vs. constitutive usage (b).}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\subfigure[]{\includegraphics[height=4cm,page=3]{output/mm9-psi2.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=4]{output/mm9-psi2.pdf}}\\
+\subfigure[]{\includegraphics[height=4cm,page=3]{output/mm9-cosi2.pdf}}%
+\subfigure[]{\includegraphics[height=4cm,page=4]{output/mm9-cosi2.pdf}}
+\caption{Mouse: The joint distribution of the sample mean and sample variance of $\psi$ and $\theta$ values vs. the combined sequence $s_D+s_A$ strength of a SJ.}
+\end{center}
+\end{figure}
+
+
+
+
+\end{document}
+

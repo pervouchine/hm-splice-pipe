@@ -1,0 +1,5 @@
+essential	ortholog	1-to-1 ortholog
+non_essential	ortholog	1-to-1 ortholog
+multi_orth	multi_orth	Multi-ortholog
+unique	unique	Species-specific	
+long_non_coding	long_non_coding	Long non-coding
