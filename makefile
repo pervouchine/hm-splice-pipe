@@ -14,7 +14,7 @@ ${MAPTOOLSDIR}bin/getsegm :
 
 all     :: ${MAPTOOLSDIR}bin/getsegm hg19.mm9.mk
 	make -f hg19.mm9.mk execute
-	make -f tx_paper.mk execute
+	make -f txpaper.mk execute
 
 hg19.mm9.mk : $(PDIR)make.pl ${LDIR}summary.tex ${LDIR}integrative_paper_figure.tex makefile
 	perl $(PDIR)make.pl hg19,mm9 ${LDIR}summary.tex ${LDIR}integrative_paper_figure.tex ${LDIR}companion_paper_figure.tex > hg19.mm9.mk
