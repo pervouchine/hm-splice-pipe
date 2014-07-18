@@ -1,4 +1,5 @@
 suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(plyr))
 suppressPackageStartupMessages(library("optparse"))
 
 option_list <- list(make_option(c("-a", "--seta"), help="table input A"),
