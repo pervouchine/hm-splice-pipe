@@ -6,7 +6,7 @@ MAPTOOLSDIR=maptools-1.0/
 include special.mk
 
 ${MAPTOOLSDIR}bin/getsegm :
-	wget https://github.com/pervouchine/maptools/archive/v1.0.tar.gz
+	wget https://github.com/pervouchine/maptools/archive/v1.0.tar.gz -O v1.0.tar.gz
 	tar -xf v1.0.tar.gz
 	rm -f v1.0.tar.gz
 	mkdir -p ${MAPTOOLSDIR}bin/
